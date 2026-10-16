@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="Lingua Privata — private German tuition for discerning individuals.">
+  <title>Lingua Privata — Private German Tuition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ivory:#f7f5ef;
+      --ivory-deep:#f0ece3;
+      --paper:#fcfbf7;
+      --ink:#20302b;
+      --ink-soft:#56615d;
+      --brass:#9a8767;
+      --line:#ddd7ca;
+      --max:1420px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--ivory);color:var(--ink);font-family:Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(24px,5.8vw,92px)}
+
+    .topline{height:34px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#7b817d}
+    header{height:102px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font-family:"EB Garamond",Georgia,serif;font-size:25px;letter-spacing:.18em;font-weight:500;white-space:nowrap}
+    .nav{display:flex;gap:32px;align-items:center;font-size:9px;letter-spacing:.18em;text-transform:uppercase}
+    .nav a{padding:7px 0;border-bottom:1px solid transparent;transition:border-color .2s ease}
+    .nav a:hover{border-color:var(--ink)}
+    .nav .enquiry{border-bottom-color:var(--brass)}
+
+    .hero{min-height:700px;display:grid;grid-template-columns:1fr;align-items:center;text-align:center;border-bottom:1px solid var(--line);position:relative}
+    .hero-inner{padding:108px 0 104px}
+    .kicker{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--brass);font-weight:500}
+    .hero h1{font-family:"EB Garamond",Georgia,serif;font-size:clamp(42px,5.2vw,66px);line-height:1.16;letter-spacing:-.018em;font-weight:400;margin:30px auto 32px;max-width:860px}
+    .hero h1 em{font-weight:400;display:inline-block;margin-top:.16em}
+    .hero p{font-family:"EB Garamond",Georgia,serif;font-size:clamp(20px,2vw,27px);line-height:1.45;max-width:760px;margin:0 auto;color:#46524d;font-weight:400}
+    .hero .detail{margin:30px auto 0;max-width:600px;color:#7b827e;font-size:12px;line-height:1.9;font-weight:300}
+    .german-only{margin:24px auto 0;font-family:"EB Garamond",Georgia,serif;font-size:18px;letter-spacing:.08em;color:#2f3d38}
+    .hero-actions{margin-top:44px;display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap}
+    .action{display:inline-flex;gap:20px;align-items:center;padding-bottom:10px;border-bottom:1px solid var(--ink);font-size:9px;letter-spacing:.19em;text-transform:uppercase;font-weight:500}
+    .quiet{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#7a817d}
+    .seal{width:78px;height:78px;border:1px solid #cfc8b9;border-radius:50%;margin:62px auto 0;display:grid;place-items:center;font-family:"EB Garamond",Georgia,serif;font-size:14px;letter-spacing:.22em;color:#9b8a6d}
+
+    .statement{padding:116px 0 122px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:.55fr 1.45fr;gap:12%}
+    .label{font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass);font-weight:500;padding-top:10px}
+    .statement blockquote{margin:0;font-family:"EB Garamond",Georgia,serif;font-size:clamp(36px,4vw,58px);line-height:1.18;letter-spacing:-.025em;font-weight:400;max-width:930px}
+    .statement blockquote span{color:#7d847f}
+
+    .private-client{padding:118px 0 128px;border-bottom:1px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:1fr .72fr;gap:10%;align-items:end;margin-bottom:64px}
+    .section-title{font-family:"EB Garamond",Georgia,serif;font-size:clamp(48px,5.5vw,78px);font-weight:400;letter-spacing:-.035em;line-height:1;margin:18px 0 0}
+    .section-note{color:#6c7571;font-size:13px;line-height:1.9;font-weight:300;margin:0;max-width:420px}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .service{padding:40px 44px 44px 0;min-height:282px}
+    .service + .service{padding-left:44px;border-left:1px solid var(--line)}
+    .number{font-size:9px;letter-spacing:.17em;color:var(--brass)}
+    .service h3{font-family:"EB Garamond",Georgia,serif;font-size:31px;line-height:1.15;font-weight:400;margin:30px 0 16px}
+    .service p{font-size:12.5px;line-height:1.95;color:#68716d;font-weight:300;max-width:320px;margin:0}
+
+    .house{background:var(--paper);border-bottom:1px solid var(--line)}
+    .house-inner{padding-top:122px;padding-bottom:126px;display:grid;grid-template-columns:.9fr 1.1fr;gap:12%;align-items:start}
+    .house h2{font-family:"EB Garamond",Georgia,serif;font-size:clamp(50px,5vw,74px);line-height:1.05;letter-spacing:-.035em;font-weight:400;margin:18px 0 0}
+    .house-copy{padding-top:28px}
+    .house-copy>p{font-size:14px;line-height:2;color:#66716c;font-weight:300;max-width:590px;margin:0 0 42px}
+    .principles{border-top:1px solid var(--line)}
+    .principle{display:grid;grid-template-columns:155px 1fr;gap:30px;padding:24px 0;border-bottom:1px solid var(--line)}
+    .principle strong{font-size:9px;text-transform:uppercase;letter-spacing:.2em;font-weight:500;color:#303d38}
+    .principle span{font-family:"EB Garamond",Georgia,serif;font-size:20px;line-height:1.45;color:#58635e}
+
+    .signature{padding:118px 0 122px;text-align:center;border-bottom:1px solid var(--line)}
+    .signature .small{font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--brass)}
+    .signature p{font-family:"EB Garamond",Georgia,serif;font-size:clamp(34px,4vw,58px);line-height:1.2;letter-spacing:-.025em;max-width:920px;margin:26px auto 0}
+
+    .contact{padding:124px 0 138px;text-align:center}
+    .contact h2{font-family:"EB Garamond",Georgia,serif;font-size:clamp(54px,5.5vw,82px);font-weight:400;letter-spacing:-.04em;line-height:1;margin:22px 0 26px}
+    .contact p{max-width:620px;margin:0 auto 38px;color:#6d7672;font-size:13px;line-height:1.9;font-weight:300}
+    .contact small{display:block;margin-top:26px;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#92958f}
+    .email-link{display:inline-block;margin-top:22px;font-family:"EB Garamond",Georgia,serif;font-size:22px;letter-spacing:.02em;border-bottom:1px solid #b9af9c;padding-bottom:5px;transition:border-color .2s ease,color .2s ease}
+    .email-link:hover{border-color:var(--ink);color:#000}
+
+    footer{border-top:1px solid var(--line);padding:32px 0 34px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:22px}
+    .footer-brand{font-family:"EB Garamond",Georgia,serif;font-size:18px;letter-spacing:.16em}
+    footer small{font-size:9px;letter-spacing:.09em;color:#979992}
+    footer small:last-child{text-align:right;text-transform:uppercase}
+
+    a:focus-visible{outline:2px solid var(--brass);outline-offset:5px}
+    @media(max-width:900px){
+      .topline{height:30px;font-size:8px} header{height:84px}.nav{gap:20px}.nav a:not(.enquiry){display:none}
+      .hero{min-height:650px}.hero-inner{padding:88px 0 78px}.seal{margin-top:50px}
+      .statement{grid-template-columns:1fr;gap:30px;padding:88px 0}
+      .section-head{grid-template-columns:1fr;gap:30px;margin-bottom:42px}
+      .private-client{padding:90px 0}.house-inner{grid-template-columns:1fr;gap:26px;padding-top:92px;padding-bottom:94px}.house-copy{padding-top:0}
+      footer{grid-template-columns:1fr;align-items:start}footer small:last-child{text-align:left}
+    }
+    @media(max-width:650px){
+      .wrap{padding-left:22px;padding-right:22px}.brand{font-size:19px}.nav .enquiry{font-size:8px}
+      .hero h1{font-size:clamp(36px,10.5vw,50px);line-height:1.18;letter-spacing:-.015em}.hero p{font-size:21px}.hero .detail{font-size:11.5px}
+      .service-grid{grid-template-columns:1fr}.service,.service+.service{padding:31px 0 34px;border-left:0;border-bottom:1px solid var(--line);min-height:0}.service:last-child{border-bottom:0}
+      .principle{grid-template-columns:1fr;gap:9px}.principle span{font-size:19px}
+      .signature{padding:88px 0 92px}.contact{padding:92px 0 104px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <div class="topline">Private German tuition · exclusively German · by individual arrangement</div>
+
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top" aria-label="Lingua Privata home">LINGUA PRIVATA</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#approach">Approach</a>
+        <a href="#services">Private Clients</a>
+        <a href="#standards">Standards</a>
+        <a class="enquiry" href="#contact">Private Enquiries</a>
+      </nav>
+    </header>
+  </div>
+
+  <main id="top">
+    <div class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <span class="kicker">Private German Tuition</span>
+          <h1 id="hero-title">Language,<br><em>personally refined.</em></h1>
+          <p>Private German tuition for individuals who expect discretion, continuity and standards as exacting as their own.</p>
+          <div class="detail">A considered, one-to-one German service shaped around the individual — their purpose, their pace and the way they wish to communicate.</div>
+          <div class="german-only">German. Exclusively.</div>
+          <div class="hero-actions">
+            <a class="action" href="#approach">Discover Lingua Privata <span aria-hidden="true">↗</span></a>
+            <a class="quiet" href="#contact">By individual arrangement</a>
+          </div>
+          <div class="seal" aria-hidden="true">L P</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section id="approach" class="statement">
+        <div class="label">The Approach</div>
+        <blockquote>The best private services are never standard. <span>Neither is the way German should be learned.</span></blockquote>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section id="services" class="private-client">
+        <div class="section-head">
+          <div>
+            <span class="label">For Private Clients</span>
+            <h2 class="section-title">Entirely individual.</h2>
+          </div>
+          <p class="section-note">Lingua Privata is devoted exclusively to German. It is designed for clients who value personal attention over volume, considered preparation over generic programmes, and quality over convenience alone.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service">
+            <span class="number">01 /</span>
+            <h3>Private German — Online</h3>
+            <p>Discreet one-to-one tuition wherever you are. Each arrangement is shaped around your level, objectives, schedule and preferred pace.</p>
+          </article>
+          <article class="service">
+            <span class="number">02 /</span>
+            <h3>Private German — In Person</h3>
+            <p>Individual German tuition at your residence, place of business or chosen destination. International engagements are available by private arrangement.</p>
+          </article>
+          <article class="service">
+            <span class="number">03 /</span>
+            <h3>Private German — Intensive</h3>
+            <p>Concentrated private study for a defined purpose — from important meetings and travel to professional transitions, presentations or accelerated progress.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section id="standards" class="house">
+      <div class="wrap house-inner">
+        <div>
+          <span class="label">House Standards</span>
+          <h2>Quietly exacting.</h2>
+        </div>
+        <div class="house-copy">
+          <p>Lingua Privata is built on a simple idea: German deserves the same level of attention as any other private service of quality. Preparation, language, pace and communication are considered individually — without spectacle and without unnecessary complication.</p>
+          <div class="principles">
+            <div class="principle"><strong>Discretion</strong><span>Private arrangements are treated as private.</span></div>
+            <div class="principle"><strong>Individuality</strong><span>No standard path where a more intelligent one can be made.</span></div>
+            <div class="principle"><strong>Continuity</strong><span>A consistent relationship creates deeper understanding and better progress.</span></div>
+            <div class="principle"><strong>Quality</strong><span>Time, preparation and attention are part of the service — not extras.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="signature wrap" aria-label="Positioning statement">
+      <span class="small">Lingua Privata</span>
+      <p>Private German tuition for those who understand that true individual service is not designed to be the cheapest option — only the right one.</p>
+    </section>
+
+    <section id="contact" class="contact wrap">
+      <span class="label">Private Enquiries</span>
+      <h2>Begin privately.</h2>
+      <p>Tell us what you wish to achieve in German and the kind of private arrangement you are looking for. Every enquiry is considered individually and treated with discretion. Where circumstances require, Lingua Privata may accompany the client beyond the conventional lesson setting.</p>
+      <a class="action" href="mailto:enquiries@linguaprivata.com?subject=Private%20Enquiry%20%E2%80%94%20Lingua%20Privata">Make a private enquiry <span aria-hidden="true">↗</span></a>
+      <br>
+      <a class="email-link" href="mailto:enquiries@linguaprivata.com?subject=Private%20Enquiry%20%E2%80%94%20Lingua%20Privata">enquiries@linguaprivata.com</a>
+      <small>Direct correspondence · individual arrangements · online · in person · private intensives</small>
+    </section>
+  </main>
+
+  <div class="wrap">
+    <footer>
+      <a class="footer-brand" href="#top">LINGUA PRIVATA</a>
+      <small>© <span id="year">2026</span> Lingua Privata</small>
+      <small>Private German Tuition</small>
+    </footer>
+  </div>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
